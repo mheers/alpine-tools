@@ -4,10 +4,11 @@ FROM alpine:${ALPINE_VERSION}
 
 RUN apk add --no-cache \
     bash \
+    bind-tools \
     curl \
     git \
-    jq \
-    openssh-client \
-    bind-tools \
     iputils \
-    netcat-openbsd
+    jq \
+    nano \
+    netcat-openbsd \
+    openssh-client
