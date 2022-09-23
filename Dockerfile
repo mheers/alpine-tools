@@ -10,5 +10,7 @@ RUN apk add --no-cache \
     iputils \
     jq \
     nano \
+    ncurses \
     netcat-openbsd \
-    openssh-client
+    openssh-client \
+    sudo
