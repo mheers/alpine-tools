@@ -12,5 +12,7 @@ RUN apk add --no-cache \
     nano \
     ncurses \
     netcat-openbsd \
+    nmap \
     openssh-client \
-    sudo
+    sudo \
+    tree
