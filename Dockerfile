@@ -6,6 +6,7 @@ RUN apk add --no-cache \
     bash \
     bind-tools \
     curl \
+    file \
     git \
     iputils \
     jq \
