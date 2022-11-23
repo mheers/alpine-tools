@@ -4,6 +4,7 @@ FROM alpine:${ALPINE_VERSION}
 
 RUN apk add --no-cache \
     bash \
+    busybox-extras \
     bind-tools \
     curl \
     file \
