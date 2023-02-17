@@ -1,12 +1,9 @@
 all: build
 
+build: docker
+
 include .env
 export
 
-build:
-	docker build --build-arg ALPINE_VERSION=$(ALPINE_VERSION)  --no-cache=true -t mheers/alpine-tools:$(ALPINE_VERSION) .
-
-push:
-	docker tag mheers/alpine-tools:$(ALPINE_VERSION) mheers/alpine-tools:latest
-	docker push mheers/alpine-tools:$(ALPINE_VERSION)
-	docker push mheers/alpine-tools:latest
+docker: ##  Builds the application for amd64 and arm64
+	docker buildx build --no-cache=true --build-arg ALPINE_VERSION=$(ALPINE_VERSION) --platform linux/amd64,linux/arm64 -t mheers/alpine-tools:$(ALPINE_VERSION) -t mheers/alpine-tools:latest --push .
