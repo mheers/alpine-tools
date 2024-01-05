@@ -15,6 +15,7 @@ RUN apk add --no-cache \
     ncurses \
     netcat-openbsd \
     nmap \
+    openldap-clients \
     openssh-client \
     openssh-server \
     postgresql-client \
