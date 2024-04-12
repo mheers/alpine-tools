@@ -4,23 +4,31 @@ FROM --platform=$BUILDPLATFORM alpine:${ALPINE_VERSION}
 
 RUN apk add --no-cache \
     bash \
-    busybox-extras \
     bind-tools \
+    busybox-extras \
     curl \
+    ethtool \
     file \
     git \
+    iproute2 \
     iputils \
     jq \
     nano \
     ncurses \
     netcat-openbsd \
     nmap \
+    numactl \
     openldap-clients \
     openssh-client \
     openssh-server \
+    openssl \
     postgresql-client \
+    procps \
     sudo \
-    tree
+    sysstat \
+    tcpdump \
+    tree \
+    util-linux
 
 RUN mkdir /root/.ssh
 RUN chmod 700 /root/.ssh
