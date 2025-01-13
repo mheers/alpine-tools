@@ -28,7 +28,8 @@ RUN apk add --no-cache \
     sysstat \
     tcpdump \
     tree \
-    util-linux
+    util-linux \
+    yq
 
 RUN mkdir /root/.ssh
 RUN chmod 700 /root/.ssh
